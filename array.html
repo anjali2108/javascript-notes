@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		//1st syntax for defining array 
+		var a=["pninfosys",1234,true,10.3,"raj"];
+		document.write(a);
+		document.write(a[0]);
+
+		//2nd syntax for defining array	
+		var arr=new Array();
+		arr[0]=10; //store value
+		arr[1]="pn";
+		arr[2]=123;
+		arr[3]=true;
+		arr[4]="kk";
+
+		document.write("<ul>");
+		for(var i=0;i<5;i++)
+		{
+			document.write("<li>"+arr[i]+"</li>");
+		}
+		document.write("</ul>");
+	</script>
+</body>
+</html>

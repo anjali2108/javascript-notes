@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="container">
+		<h1 class="text-center text-warning">Form Validation</h1>
+		<br/>
+		<form onsubmit="return anjali()">
+			<div class="mb-3">
+				<label>Username</label>
+				<input type="text" class="form-control" id="username">
+				<span id="u" class="text-danger"></span>
+			</div>
+			<div class="mb-3">
+				<label>Password</label>
+				<input type="password" class="form-control" id="password">
+				<span id="p" class="text-danger"></span>
+			</div>
+			<div class="mb-3">
+				<label>Confirm Password</label>
+				<input type="password" class="form-control" id="cpassword">
+				<span id="c" class="text-danger"></span>
+			</div>
+			<div class="mb-3">
+				<label>Mobile Number</label>
+				<input type="number" class="form-control" id="mobile">
+				<span id="m" class="text-danger"></span>
+			</div>
+			<button type="submit" class="btn btn-info">Submit</button>
+		</form>
+	</div>
+
+
+	<script>
+		function anjali()
+		{
+			var user=document.getElementById("username").value;
+			var pass=document.getElementById("password").value;
+			var cpass=document.getElementById("cpassword").value;
+			var mobile=document.getElementById("mobile").value;
+
+
+
+			if(user == "")
+			{
+				document.getElementById("u").innerHTML="Please fill the username field";
+				return false;
+			}
+			if((user.length <= 2)||(user.length > 20))
+			{
+				document.getElementById("u").innerHTML="Username length must be between 2 and 20";
+				return false;
+			}
+			if(!isNaN(user))
+			{
+				document.getElementById("u").innerHTML="Only characters are allowed";
+				return false;
+			}
+		 	var format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+
+			if(format.test(user)){
+				document.getElementById('u').innerHTML="Username must not contain special characters";
+			  	return false;
+			} 
+
+			// validating password
+			if(pass == "")
+			{
+				document.getElementById("p").innerHTML="Please fill the password field";
+				return false;
+			}
+			if((pass.length <= 2)||(pass.length > 20))
+			{
+				document.getElementById("p").innerHTML="password length must be between 2 and 20";
+				return false;
+			}
+			if(cpass == "")
+			{
+				document.getElementById("p").innerHTML="Please fill the confirm password field";
+				return false;
+			}
+			if(pass!=cpass)
+			{
+				document.getElementById("c").innerHTML="Password and Confirm password does not match";
+				return false;
+			}
+			if(mobile == "")
+			{
+				document.getElementById("m").innerHTML="Please fill the mobile field";
+				return false;
+			}
+			if(mobile.length!=10)
+			{
+				document.getElementById("m").innerHTML="Mobile number must be 10 digit only";
+				return false;
+			}
+		}
+	</script>
+</body>
+</html>

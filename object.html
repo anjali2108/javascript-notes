@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		var a={
+			fname:'anjali',
+			lname:'kesarwani',
+			age:24,
+			email:'anjali@gmail.com',
+			favmovies:['dhoom','sholay'],
+			living:{
+				city:'allahabad',
+				country:'India'
+			},
+			fullname : function(){
+
+    			return this.age + " " + this.lname;  //(var a ke liye this use)
+
+    		}
+		}
+		document.write(a.favmovies);
+	  document.write(a.favmovies[1]);
+	 
+	  document.write(a.fullname());
+	  document.write(a.living.city);
+       document.write(a.living.country);
+	</script>
+</body>
+</html>

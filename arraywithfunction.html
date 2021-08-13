@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		//some-returns true if any one of the element of array passes the test else false
+		var ages=[1,41,1,3,5,1];
+		document.write(ages+"<br/>");
+		var b=ages.some(a);
+		document.write(b+"<br/>");
+
+		function a(age)
+		{
+			return age>=10;
+		}
+
+		// every-checks every elemnt of array that passes a test
+		var ages=[1,41,1,3,5,1];
+		document.write(ages+"<br/>");
+		var b=ages.every(a);
+		document.write(b+"<br/>");
+
+		function a(age)
+		{
+			return age>=10;
+		}
+
+		// find- returns the value of first element of array that passes a test
+		var ages=[1,41,1,3,5,1];
+		document.write(ages+"<br/>");
+		var b=ages.find(a);
+		var c=ages.findIndex(a);
+		document.write(b+"<br/>");
+		document.write(c+"<br/>");
+
+
+		function a(age)
+		{
+			return age>=5;
+		}
+
+		// filter -creates an array that passes the test
+		var ages=[1,20,30,40,5,1];
+		document.write(ages+"<br/>");
+		var b=ages.filter(a);
+		document.write(b+"<br/>");
+
+		function a(age)
+		{
+			return age>=20;
+		}
+
+		// toString converts array into string
+		var a=["vikas","raj","mohit"];
+		var d=a.toString();
+		document.write(d+"<br/>");
+		document.write(typeof(d)+"<br/>");
+
+		// valueOf return
+		// var b="anjali";
+		// var e=b.valueOf();
+		// document.write(e+"<br/>");
+		// document.write(typeof(e));
+
+		// fill
+		var a=["anjali","rita","anshika"];
+		a.fill("ram");
+		document.write(a+"<br/>");
+	</script>
+</body>
+</html>

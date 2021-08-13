@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Login</h1>
+	<div>
+		Username:<br/>
+		<input type="text" id="username">
+		<br/>
+		<br/>
+		Password:<br/>
+		<input type="password" id="password">
+		<br/>
+		<br/>
+		<button onclick="login()">Submit</button>
+	</div>
+	<script>
+		function login()
+		{
+			var uname=document.getElementById("username").value;
+			var pass=document.getElementById("password").value;
+			// console.log(uname);
+			// console.log(pass);
+			if(uname=="anjali" && pass=="1234")
+			{
+				window.alert("Login Successful");
+			}
+			else
+			{
+				window.alert("Username or password incorrect");
+			}
+		}
+	</script>
+</body>
+</html>

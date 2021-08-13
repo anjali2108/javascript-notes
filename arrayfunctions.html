@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		//sort and reverse
+		var a=["vikas","ram","moham","raj"];
+		document.write(a+"<br/><br/>");
+		a.sort();
+		document.write(a+"<br/>");
+		a.reverse();
+		document.write(a+"<br/>");
+
+		//pop and push
+		var b=["vikas","ram","moham","raj"];
+		document.write(b+"<br/><br/>");
+		b.pop();
+		document.write(b+"<br/>");
+		b.push("pninfosys");
+		document.write(b+"<br/>");
+
+		// shift and unshift
+		var c=["vikas","ram","moham","raj"];
+		document.write(c+"<br/><br/>");
+		c.shift();
+		document.write(c+"<br/>");
+		c.unshift("pninfosys");
+		document.write(c+"<br/>");
+
+		//concat and join
+		var d=["vikas","ram","moham","raj"];
+		var e=["moham","raj"];
+		var f=["vikas","raj"];
+		var g=d.concat(e);
+		document.write(g+"<br/><br/>");
+		var h=g.join("/");
+		document.write(h+"<br/>");
+
+		//slice
+		var i=["sanjay","vikas","raj","mohit","karan","ddd","ccc","aaa"];
+		document.write(i+"<br/><br/>");
+		// var j=i.slice(1,5);
+		// var j=i.splice(2);
+		var j=i.splice(-4);
+		document.write(j+"<br/>");
+
+		// splice
+		var k=["sanjay","vikas","raj","karan"];
+		document.write(k+"<br/><br/>");
+		k.splice(2,1,"NEHA","ram"); //1 delete value
+		document.write(k+"<br/>");
+
+		// isArray()
+		var l=["sanjay","vikas","raj","karan"];
+		var m="anjali";
+		var n=20;
+		document.write(l+"<br/><br/>");
+		var o=Array.isArray(l);
+		document.write(o+"<br/><br/>");
+
+		// indexOf and lastIndexOf
+		var a=["anjali","ayush","ram","shyam","ram"];
+		var b=a.indexOf("ram",1);
+		var c=a.lastIndexOf("ram");
+		document.write(b+"<br/>");
+		document.write(c+"<br/>");
+	</script>
+</body>
+</html>
